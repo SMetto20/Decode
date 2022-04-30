@@ -15,7 +15,7 @@ class MainTest {
         expectedOutput.add("andy");
         assertEquals(expectedOutput, main.encodeWords(" "));
     }
-    Test
+    @Test
     public void decodeChecker_stringOutput_ArrayList(){
         Main secondary = new Main();
         List<String>expectedOutput =new ArrayList();

@@ -1,7 +1,7 @@
 package org.example;
 
 public class Decode {
-    public static String decrypt(String cipher, int key) {
+    public static String decrypt(String cipher, int key ) {
         String text = " ";
         for (int i = 0; i < cipher.length(); i++) {
             char letter = cipher.charAt(i);
@@ -12,7 +12,20 @@ public class Decode {
                 }
 
                 letter = (char) (x + 'A');
-        }
-    }
 
+            } else if (Character.isLowerCase(letter)) {
+                int x = letter - 'a' - key;
+                if (x < 0) {
+                    x += 26;
+                }
+
+                letter = (char) (x + 'a');
+
+            }
+            cipher += letter;
+
+        }
+        return text;
+
+    }
 }

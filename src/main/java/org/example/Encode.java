@@ -12,18 +12,16 @@ public class Encode {
 
                 letter = (char) (x + 'A');
 
+            }else if (Character.isLowerCase(letter)){
+                int x = letter - 'a' + key;
+
+                x%=26;
+
+                letter= (char) (x + 'a');
+
             }
+            cipher+= letter;
         }
-        else if (Character.isLowerCase(letter)){
-            int x = letter - 'a' + key;
-
-            x%=26;
-
-            letter= (char) (x + 'a');
-
-        }
-        cipher+= letter;
-    }
         return cipher;
-}
+    }
     }

@@ -14,4 +14,16 @@ public class Encode {
 
             }
         }
+        else if (Character.isLowerCase(letter)){
+            int x = letter - 'a' + key;
+
+            x%=26;
+
+            letter= (char) (x + 'a');
+
+        }
+        cipher+= letter;
+    }
+        return cipher;
+}
     }

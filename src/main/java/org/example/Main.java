@@ -4,6 +4,8 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
+import static org.example.Encode.encrypt;
+
 public class Main {
     public ArrayList<String> encodeWords(String encodeCheck) {
         ArrayList<String> check = new ArrayList<String>();
@@ -26,5 +28,9 @@ public class Main {
         String text = br.readLine();
         System.out.println("enter encryption key");
         int key = Integer.parseInt(br.readLine());
+        //encrypt
+        System.out.println("Plain Text:\n"+text );
+        String cipher = encrypt(text,key);
+        System.out.println("Cipher Text:\n"+cipher);
     }
 }

@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 
+import static org.example.Decode.decrypt;
 import static org.example.Encode.encrypt;
 
 public class Main {
@@ -32,5 +33,9 @@ public class Main {
         System.out.println("Plain Text:\n"+text );
         String cipher = encrypt(text,key);
         System.out.println("Cipher Text:\n"+cipher);
+//        decrypt
+        System.out.println("Cipher Text:\n" + text );
+        text =decrypt(cipher,key);
+        System.out.println("Plain Text:\n"+text);
     }
 }

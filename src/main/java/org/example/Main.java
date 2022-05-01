@@ -34,7 +34,7 @@ public class Main {
         String cipher = encrypt(text,key);
         System.out.println("Cipher Text:\n"+cipher);
 //        decrypt
-        System.out.println("Cipher Text:\n" + text );
+        System.out.println("Plain Text:\n" + text );
         text =decrypt(cipher,key);
         System.out.println("Plain Text:\n"+text);
     }

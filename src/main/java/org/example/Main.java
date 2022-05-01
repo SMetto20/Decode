@@ -1,5 +1,7 @@
 package org.example;
 
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 public class Main {
@@ -17,7 +19,10 @@ public class Main {
         check2.add("harry");
         return check2;
     }
-    public static void main(String[] args) {
-        System.out.println("Hello world!");
+    public static void main(String[] args)throws Exception {
+        InputStreamReader is = new InputStreamReader(System.in);
+        BufferedReader br  = new BufferedReader(is);
+        System.out.println("enter text to encrypt");
+        String text = br.readLine();
     }
 }

@@ -24,5 +24,7 @@ public class Main {
         BufferedReader br  = new BufferedReader(is);
         System.out.println("enter text to encrypt");
         String text = br.readLine();
+        System.out.println("enter encryption key");
+        int key = Integer.parseInt(br.readLine());
     }
 }
